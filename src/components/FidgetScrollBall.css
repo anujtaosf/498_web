@@ -1,0 +1,8 @@
+.scroll-ball {
+    width: 80px;
+    height: 80px;
+    margin: 20px auto;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #f1e9d0, #ff9800);
+    transition: transform 0.1s linear;
+  }

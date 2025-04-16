@@ -1,0 +1,49 @@
+.bubble-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+  }
+  
+  .bubble-row {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .offset-row {
+    margin-left: 25px;
+  }
+  
+  .bubble {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  .bubble.active {
+    opacity: 1;
+  }
+  
+  /* Warm tone bubble colors (peach/orange/pink theme) */
+  .right-color-1 { background-color: #fde9ea; }
+  .right-color-2 { background-color: #ffdcdc; }
+  .right-color-3 { background-color: #ffcccc; }
+  .right-color-4 { background-color: #ffc3b3; }
+  .right-color-5 { background-color: #ffdbb3; }
+  
+  .right-color-6 { background-color: #f2c7c0; }
+  .right-color-7 { background-color: #f293b8; }
+  .right-color-8 { background-color: #e97878; }
+  .right-color-9 { background-color: #ff9b7d; }
+  .right-color-10 { background-color: #f5aa64; }
+  
+  .right-color-11 { background-color: #deb5b5; }
+  .right-color-12 { background-color: #f6a2a2; }
+  .right-color-13 { background-color: #f48484; }
+  .right-color-14 { background-color: #fbbf94; }
+  .right-color-15 { background-color: #ffce80; }
+  

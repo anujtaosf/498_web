@@ -1,0 +1,15 @@
+.remove-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;         /* Ensure it's visible */
+    color: #6c757d;            /* Default Bootstrap muted gray */
+    line-height: 1;
+    z-index: 1;
+  }
+  
+  .remove-btn:hover {
+    color: #dc3545;   
+    background-color: transparent;
+    cursor: pointer;
+  }
+  

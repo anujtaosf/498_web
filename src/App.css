@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+body.dark-mode {
+  background-color: #121212 !important;
+}
+
+body.dark-mode .position-sticky.top-0 {
+  background-color: #121212 !important;
+}
+
+/* Ensure header title text stays white */
+body.dark-mode h1 {
+  color: #ffffff !important;
+}
+/* Button appearance override */
+body.dark-mode .btn-light {
+  background-color: #ededed !important;
+  color: #292929 !important;
+  border-color: #9e9e9e !important;
+}
+
+body.dark-mode .btn-light:hover {
+  background-color: #cfcfcf !important;
+}
