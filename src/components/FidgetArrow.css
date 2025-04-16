@@ -1,0 +1,61 @@
+.arrow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .arrow-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .arrow {
+    width: 60px;
+    height: 60px;
+    margin: 3px;
+    border-radius: 4px;
+    opacity: 0.3;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Default pastel colors */
+  .arrow.up {
+    background-color: #f8cfcf;
+  }
+  .arrow.down {
+    background-color: #d2f2d2;
+  }
+  .arrow.left {
+    background-color: #cfe2f8;
+  }
+  .arrow.right {
+    background-color: #d9d2f8;
+  }
+  .arrow.center {
+    background: transparent;
+    opacity: 1;
+  }
+  
+  /* Active arrow highlights */
+  .arrow.up.active {
+    background-color: #e97777;
+    opacity: 1;
+  }
+  
+  .arrow.down.active {
+    background-color: #7ccba2;
+    opacity: 1;
+  }
+  
+  .arrow.left.active {
+    background-color: #81a7d9;
+    opacity: 1;
+  }
+  
+  .arrow.right.active {
+    background-color: #9386c4;
+    opacity: 1;
+  }
+  
