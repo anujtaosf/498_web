@@ -20,9 +20,7 @@ const FidgetBoard = () => {
 
   return (
     <Container fluid className="p-4 position-relative">
-      {/* Sticky Header Row */}
       <div className="position-sticky top-0 bg-white z-3 d-flex justify-content-between align-items-center mb-4" style={{ zIndex: 1030 }}>
-        {/* Left side toggle button */}
         {!showMenu && (
           <div className="position-fixed top-0 start-0 m-3">
             <Button variant="light" onClick={() => setShowMenu(true)}>
@@ -31,13 +29,11 @@ const FidgetBoard = () => {
           </div>
         )}
         <h1 className="text-center flex-grow-1">My Virtual Fidget Board</h1>
-        {/* Right side Add Fidget */}
         <div className="position-fixed top-0 end-0 m-3">
           <AddFidget addFidget={addFidget} />
         </div>
       </div>
 
-      {/* Sliding Features Menu */}
       {showMenu && (
         <div
           className="position-fixed top-0 start-0 vh-100 bg-white border-end shadow p-3"
@@ -58,7 +54,6 @@ const FidgetBoard = () => {
         </div>
       )}
 
-      {/* Main Grid Content */}
       <Row className="mt-5 pt-4">
         <Col>
           <Row xs={1} md={3} className="g-3">

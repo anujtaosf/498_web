@@ -45,11 +45,10 @@ body.dark-mode .position-sticky.top-0 {
   background-color: #121212 !important;
 }
 
-/* Ensure header title text stays white */
 body.dark-mode h1 {
   color: #ffffff !important;
 }
-/* Button appearance override */
+
 body.dark-mode .btn-light {
   background-color: #ededed !important;
   color: #292929 !important;

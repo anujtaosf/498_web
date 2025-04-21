@@ -11,7 +11,7 @@ const FidgetScrollBall = () => {
       const delta = window.scrollY - lastScrollY.current;
       lastScrollY.current = window.scrollY;
 
-      setRotation((prev) => prev + delta);  // Adjust this multiplier if too fast
+      setRotation((prev) => prev + delta); // can adjust multiplier if too fast
     };
 
     window.addEventListener('scroll', handleScroll);
