@@ -1,8 +1,40 @@
+.scroll-wrapper {
+  position: relative;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Invisible scroll sensor */
+.scroll-sensor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  z-index: 1;
+}
+
+.scroll-sensor::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-padding {
+  height: 1000px; /* creates space to scroll */
+}
+
+/* Ball centered visually */
 .scroll-ball {
-    width: 80px;
-    height: 80px;
-    margin: 20px auto;
-    border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, #f1e9d0, #ff9800);
-    transition: transform 0.1s linear;
-  }
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #f1e9d0, #ff9800);
+  transition: transform 0.1s linear;
+  z-index: 2;
+  pointer-events: none;
+}

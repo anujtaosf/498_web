@@ -4,24 +4,40 @@ import './FidgetScrollBall.css';
 
 const FidgetScrollBall = () => {
   const [rotation, setRotation] = useState(0);
-  const lastScrollY = useRef(window.scrollY);
+  const scrollRef = useRef(null);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const delta = window.scrollY - lastScrollY.current;
-      lastScrollY.current = window.scrollY;
+    const container = scrollRef.current;
+    lastScrollY.current = container.scrollTop;
 
-      setRotation((prev) => prev + delta); // can adjust multiplier if too fast
+    const handleScroll = () => {
+      const delta = container.scrollTop - lastScrollY.current;
+      lastScrollY.current = container.scrollTop;
+
+      setRotation((prev) => prev + delta);
+
+      // Reset scrollTop to middle when near edges to fake infinite scroll
+      if (container.scrollTop <= 0) {
+        container.scrollTop = 500;
+        lastScrollY.current = 500;
+      } else if (container.scrollTop >= container.scrollHeight - container.clientHeight) {
+        container.scrollTop = 500;
+        lastScrollY.current = 500;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    container.addEventListener('scroll', handleScroll);
+    container.scrollTop = 500; // Start in the middle
+
+    return () => container.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <Card bg="light" className="p-3 text-center">
-      <Card.Title>Scroll Ball Fidget</Card.Title>
-      <Card.Text className="fst-italic">Scroll the page to make the ball roll</Card.Text>
+    <Card bg="light" className="p-4 text-center scroll-wrapper">
+      <div ref={scrollRef} className="scroll-sensor">
+        <div className="scroll-padding" />
+      </div>
       <div
         className="scroll-ball"
         style={{ transform: `rotate(${rotation}deg)` }}
