@@ -1,3 +1,10 @@
+/**
+ * Highlights directional arrows when the user presses arrow keys.
+ * Provides immediate visual feedback for Up, Down, Left, and Right inputs.
+ *
+ * @returns {JSX.Element}
+ */
+
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import './FidgetArrow.css';

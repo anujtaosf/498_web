@@ -1,3 +1,11 @@
+/**
+ * Renders a dropdown menu for adding fidgets to the board.
+ *
+ * @param {Object} props
+ * @param {Function} props.addFidget - Function to add a selected fidget component
+ * @returns {JSX.Element}
+ */
+
 import React from 'react';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 import FidgetArrow from './FidgetArrow';

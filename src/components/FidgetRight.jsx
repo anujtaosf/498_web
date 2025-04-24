@@ -1,3 +1,11 @@
+/**
+ * 
+ * Visualizes right-hand key inputs using animated bubbles. Highlights keys
+ * in the right-hand region of a QWERTY keyboard (e.g., IJKL, HJ).
+ *
+ * @returns {JSX.Element}
+ */
+
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import './FidgetRight.css';

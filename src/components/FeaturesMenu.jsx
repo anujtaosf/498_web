@@ -1,3 +1,10 @@
+/**
+ * Renders a sidebar menu that holds board-level features.
+ * Currently includes dark mode toggle and placeholder cards.
+ *
+ * @returns {JSX.Element}
+ */
+
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import FeatureDarkMode from './FeatureDarkMode';

@@ -1,3 +1,9 @@
+/**
+ * A toggle button that switches the application between light and dark mode.
+ *
+ * @returns {JSX.Element}
+ */
+
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 

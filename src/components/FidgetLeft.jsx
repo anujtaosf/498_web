@@ -1,3 +1,9 @@
+/**
+ * 
+ * Visualizes left-hand key inputs using animated bubbles. Highlights keys
+ * in the left-hand region of a QWERTY keyboard (e.g., WASD, QWER).
+ */
+
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import './FidgetLeft.css';

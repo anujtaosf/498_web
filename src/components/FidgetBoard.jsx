@@ -1,3 +1,10 @@
+/**
+ * The main container for the interactive fidget grid. Handles layout, feature menu toggling,
+ * and dynamic rendering of fidget components. Users can add or remove fidgets via dropdown.
+ *
+ * @returns {JSX.Element}
+ */
+
 import React, { useState, useRef } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import FeaturesMenu from './FeaturesMenu';
