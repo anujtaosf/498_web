@@ -37,18 +37,19 @@ function App() {
       </p>
 
       <div className="text-center my-3">
-        <a href="website.com" className="btn btn-outline-secondary mx-2" target="_blank" rel="noreferrer">PDF</a>
+        <a href="https://website.com" className="btn btn-outline-secondary mx-2">PDF
+        </a>
       </div>
-
       <div className="my-4">
-        <h5><strong>Splatting in the Wild</strong></h5>
+        <h4><strong>Splatting in the Wild</strong></h4>
         <p>
           Our approach is to train 3D Gaussian Splatting methods on custom datasets to test their performance under varying conditions. 
           We start by performing baseline evaluations of existing datasets, specifically the PhotoTourism dataset. We train both Splatfacto-W 
           and WildGaussians on these datasets, both of which claim to be state-of-the-art models for "in the wild" datasets. We also train this dataset 
           with Splatfacto, which provides as a baseline model for comparison. We then evaluate these results based on objective and subjective metrics.
-
-          Once having trained out baseline datasets, we demonstrate the capabilities of each model on our own data. We collected a wide range of data in 
+        </p>
+        <p>
+        Once having trained out baseline datasets, we demonstrate the capabilities of each model on our own data. We collected a wide range of data in 
           order to assess the generalizability of Gaussian Splatting methods beyond pre-established datasets. Captured scenes include challenging lighting scenarios,
           static and transient occlusions, and dynamic scene elements (creating background noise).
         </p>
