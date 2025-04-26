@@ -3,6 +3,14 @@ import './App.css';
 import Splatfacto from './sculpture_splatfacto.mp4';
 import SplatfactoW from './sculpture_splatfacto-w.mp4';
 
+import {
+  ReactCompareSlider,
+  ReactCompareSliderImage
+} from 'react-compare-slider';
+import SplatImg from './splat_img.png';
+import SplatImgWild from './splat_img_wild.png';
+
+
 //more testing
 
 function App() {
@@ -42,6 +50,16 @@ function App() {
             </video>
             <p className="text-center mt-2">Splatfacto-W</p>
           </div>
+        </div>
+      </div>
+      <div className="my-5">
+        <h4 className="mb-3">Baseline Comparison</h4>
+        <div style={{ maxWidth: '900px', margin: '0 auto', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 5px 15px rgba(0,0,0,0.2)' }}>
+          <ReactCompareSlider
+            itemOne={<ReactCompareSliderImage src={SplatImg} alt="Splatfacto" />}
+            itemTwo={<ReactCompareSliderImage src={SplatImgWild} alt="Ours" />}
+            style={{ height: 'auto', width: '100%' }}
+          />
         </div>
       </div>
     </div>
