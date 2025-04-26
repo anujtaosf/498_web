@@ -12,8 +12,10 @@ import NateSplatW from './nate_splatfacto-w.mp4';
 import UnionSplat from './union_ns_splatfacto.mp4';
 import UnionSplatW from './union_ns_splatfacto-w.mp4';
 
-import SplatImg from './splat_img.png';
-import SplatImgWild from './splat_img_wild.png';
+import BrandImg from './brandenburg_splat_img.png';
+import BrandImgW from './brandenburg_splat_img_wild.png';
+import TreviImg from './trevi_splat_img.png';
+import TreviImgW from './trevi_splat_img_wild.png';
 
 function App() {
   const row1Vid1Ref = useRef(null);
@@ -62,14 +64,64 @@ function App() {
       </div>
       <div className="my-5">
         <h4 className="mb-3">Baseline Comparison</h4>
-        <div style={{ maxWidth: '900px', margin: '0 auto', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 5px 15px rgba(0,0,0,0.2)' }}>
-          <ReactCompareSlider
-            itemOne={<ReactCompareSliderImage src={SplatImg} alt="Splatfacto" />}
-            itemTwo={<ReactCompareSliderImage src={SplatImgWild} alt="Ours" />}
-            style={{ height: 'auto', width: '100%' }}
-          />
+
+          {[
+            { img1: BrandImg, img2: BrandImgW },
+            { img1: TreviImg, img2: TreviImgW }
+          ].map((pair, index) => (
+            <div 
+              key={index}
+              style={{ 
+                maxWidth: '900px', 
+                margin: '2rem auto', 
+                borderRadius: '10px', 
+                overflow: 'hidden', 
+                position: 'relative', 
+                boxShadow: '0 5px 15px rgba(0,0,0,0.2)' 
+              }}
+            >
+              <ReactCompareSlider
+                itemOne={<ReactCompareSliderImage src={pair.img1} alt="Splatfacto" />}
+                itemTwo={<ReactCompareSliderImage src={pair.img2} alt="Splatfacto-W" />}
+                style={{ height: 'auto', width: '100%' }}
+                handle={
+                  <div style={{
+                    width: '4px',
+                    backgroundColor: 'rgba(255, 255, 255, 0.6)', 
+                    borderRadius: '2px',
+                    height: '100%'
+                  }} />
+                }
+                onlyHandleDraggable={false}  // Mouse controls the slider everywhere
+              />
+              {/* Labels */}
+              <div style={{ 
+                position: 'absolute', 
+                top: '10px', 
+                left: '10px', 
+                backgroundColor: 'rgba(0,0,0,0.5)', 
+                color: 'white', 
+                padding: '4px 8px', 
+                borderRadius: '5px',
+                fontSize: '0.9rem'
+              }}>
+                Splatfacto
+              </div>
+              <div style={{ 
+                position: 'absolute', 
+                top: '10px', 
+                right: '10px', 
+                backgroundColor: 'rgba(0,0,0,0.5)', 
+                color: 'white', 
+                padding: '4px 8px', 
+                borderRadius: '5px',
+                fontSize: '0.9rem'
+              }}>
+                Splatfacto-W
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
       <div
         className="row my-5"
         onMouseEnter={() => handlePlay(row1Vid1Ref, row1Vid2Ref)}
