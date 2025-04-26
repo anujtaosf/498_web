@@ -45,7 +45,7 @@ function App() {
       </p>
 
       <div className="text-center my-3">
-        <a href="https://drive.google.com/file/d/1zFPx9PTDlRq-_esW9VPtCX89pRxQEIEG/view?usp=sharing" className="btn btn-outline-secondary mx-2">PDF
+        <a href="https://drive.google.com/file/d/1zFPx9PTDlRq-_esW9VPtCX89pRxQEIEG/view?usp=sharing" target="_blank" className="btn btn-outline-secondary mx-2">PDF
         </a>
       </div>
       <div className="my-4">
