@@ -9,6 +9,8 @@ import Splatfacto from './sculpture_splatfacto.mp4';
 import SplatfactoW from './sculpture_splatfacto-w.mp4';
 import NateSplat from './nate_splatfacto.mp4';
 import NateSplatW from './nate_splatfacto-w.mp4';
+import UnionSplat from './union_ns_splatfacto.mp4';
+import UnionSplatW from './union_ns_splatfacto-w.mp4';
 
 import SplatImg from './splat_img.png';
 import SplatImgWild from './splat_img_wild.png';
@@ -18,15 +20,19 @@ function App() {
   const row1Vid2Ref = useRef(null);
   const row2Vid1Ref = useRef(null);
   const row2Vid2Ref = useRef(null);
+  const row3Vid1Ref = useRef(null);
+  const row3Vid2Ref = useRef(null);
 
-  const handlePlay = (vid1, vid2) => {
+  const handlePlay = (vid1, vid2, vid3) => {
     vid1.current?.play();
     vid2.current?.play();
+    vid3.current?.play();
   };
 
-  const handlePause = (vid1, vid2) => {
+  const handlePause = (vid1, vid2, vid3) => {
     vid1.current?.pause();
     vid2.current?.pause();
+    vid3.current?.pause();
   };
 
   return (
@@ -98,6 +104,25 @@ function App() {
         <div className="col-md-6 mb-3">
           <video ref={row2Vid2Ref} className="w-100 rounded shadow" loop muted playsInline>
             <source src={NateSplatW} type="video/mp4" />
+          </video>
+          <p className="text-center mt-2">Splatfacto-W</p>
+        </div>
+      </div>
+      <div
+        className="row my-5"
+        onMouseEnter={() => handlePlay(row3Vid1Ref, row3Vid2Ref)}
+        onMouseLeave={() => handlePause(row3Vid1Ref, row3Vid2Ref)}
+      >
+        <h4 className="mb-3">Splatting the Union</h4>
+        <div className="col-md-6 mb-3">
+          <video ref={row3Vid1Ref} className="w-100 rounded shadow" loop muted playsInline>
+            <source src={UnionSplat} type="video/mp4" />
+          </video>
+          <p className="text-center mt-2">Splatfacto</p>
+        </div>
+        <div className="col-md-6 mb-3">
+          <video ref={row3Vid2Ref} className="w-100 rounded shadow" loop muted playsInline>
+            <source src={UnionSplatW} type="video/mp4" />
           </video>
           <p className="text-center mt-2">Splatfacto-W</p>
         </div>
