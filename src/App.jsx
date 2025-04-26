@@ -62,66 +62,7 @@ function App() {
           static and transient occlusions, and dynamic scene elements (creating background noise).
         </p>
       </div>
-      <div className="my-5">
-        <h4 className="mb-3">Baseline Comparison</h4>
-
-          {[
-            { img1: BrandImg, img2: BrandImgW },
-            { img1: TreviImg, img2: TreviImgW }
-          ].map((pair, index) => (
-            <div 
-              key={index}
-              style={{ 
-                maxWidth: '900px', 
-                margin: '2rem auto', 
-                borderRadius: '10px', 
-                overflow: 'hidden', 
-                position: 'relative', 
-                boxShadow: '0 5px 15px rgba(0,0,0,0.2)' 
-              }}
-            >
-              <ReactCompareSlider
-                itemOne={<ReactCompareSliderImage src={pair.img1} alt="Splatfacto" />}
-                itemTwo={<ReactCompareSliderImage src={pair.img2} alt="Splatfacto-W" />}
-                style={{ height: 'auto', width: '100%' }}
-                handle={
-                  <div style={{
-                    width: '4px',
-                    backgroundColor: 'rgba(255, 255, 255, 0.6)', 
-                    borderRadius: '2px',
-                    height: '100%'
-                  }} />
-                }
-                onlyHandleDraggable={false}  // Mouse controls the slider everywhere
-              />
-              {/* Labels */}
-              <div style={{ 
-                position: 'absolute', 
-                top: '10px', 
-                left: '10px', 
-                backgroundColor: 'rgba(0,0,0,0.5)', 
-                color: 'white', 
-                padding: '4px 8px', 
-                borderRadius: '5px',
-                fontSize: '0.9rem'
-              }}>
-                Splatfacto
-              </div>
-              <div style={{ 
-                position: 'absolute', 
-                top: '10px', 
-                right: '10px', 
-                backgroundColor: 'rgba(0,0,0,0.5)', 
-                color: 'white', 
-                padding: '4px 8px', 
-                borderRadius: '5px',
-                fontSize: '0.9rem'
-              }}>
-                Splatfacto-W
-              </div>
-            </div>
-          ))}
-        </div>
+      
       <div
         className="row my-5"
         onMouseEnter={() => handlePlay(row1Vid1Ref, row1Vid2Ref)}
@@ -179,6 +120,66 @@ function App() {
           <p className="text-center mt-2">Splatfacto-W</p>
         </div>
       </div>
+
+      <div className="my-5">
+        <h4 className="mb-3">Baseline Comparison</h4>
+
+          {[
+            { img1: BrandImg, img2: BrandImgW },
+            { img1: TreviImg, img2: TreviImgW }
+          ].map((pair, index) => (
+            <div 
+              key={index}
+              style={{ 
+                maxWidth: '900px', 
+                margin: '2rem auto', 
+                borderRadius: '10px', 
+                overflow: 'hidden', 
+                position: 'relative', 
+                boxShadow: '0 5px 15px rgba(0,0,0,0.2)' 
+              }}
+            >
+              <ReactCompareSlider
+                itemOne={<ReactCompareSliderImage src={pair.img1} alt="Splatfacto" />}
+                itemTwo={<ReactCompareSliderImage src={pair.img2} alt="Splatfacto-W" />}
+                style={{ height: 'auto', width: '100%' }}
+                handle={
+                  <div style={{
+                    width: '4px',
+                    backgroundColor: 'rgba(255, 255, 255, 0.6)', 
+                    borderRadius: '2px',
+                    height: '100%'
+                  }} />
+                }
+                onlyHandleDraggable={false}
+              />
+              <div style={{ 
+                position: 'absolute', 
+                top: '10px', 
+                left: '10px', 
+                backgroundColor: 'rgba(0,0,0,0.5)', 
+                color: 'white', 
+                padding: '4px 8px', 
+                borderRadius: '5px',
+                fontSize: '0.9rem'
+              }}>
+                Splatfacto
+              </div>
+              <div style={{ 
+                position: 'absolute', 
+                top: '10px', 
+                right: '10px', 
+                backgroundColor: 'rgba(0,0,0,0.5)', 
+                color: 'white', 
+                padding: '4px 8px', 
+                borderRadius: '5px',
+                fontSize: '0.9rem'
+              }}>
+                Splatfacto-W
+              </div>
+            </div>
+          ))}
+        </div>
     </div>
   );
 }
